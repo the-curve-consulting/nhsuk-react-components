@@ -91,5 +91,8 @@
   ],
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "main": "dist/index.js"
+  "main": "dist/index.js",
+  "publishConfig": {
+    "the-curve-consulting:registry": "https://npm.pkg.github.com"
+  }
 }
