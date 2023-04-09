@@ -26,9 +26,10 @@ jobs:
       - name: Set Version to Release Tag Name
         run: |
           yarn version --new-version ${{ github.event.release.tag_name }} --no-git-tag-version
-      
-      - name: Publish to npm, publish pre-release as beta
-        uses: JS-DevTools/npm-publish@v1 
+            
+      - uses: actions/setup-node@v3
         with:
-          token: ${{ secrets.NPM_TOKEN }}
-          tag: ${{ github.event.release.prerelease && 'beta' || 'latest' }}
+          registry-url: 'https://npm.pkg.github.com'
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
