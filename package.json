@@ -93,6 +93,6 @@
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "publishConfig": {
-    "the-curve-consulting:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/the-curve-consulting"
   }
 }
