@@ -1,0 +1,719 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Checkboxes matches snapshot (via server): client 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <fieldset
+      aria-describedby="example--hint"
+      class="nhsuk-fieldset"
+    >
+      <legend
+        class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"
+      >
+        How do you want to be contacted about this?
+      </legend>
+      <div
+        class="nhsuk-hint"
+        id="example--hint"
+      >
+        Select all options that are relevant to you
+      </div>
+      <div
+        class="nhsuk-checkboxes"
+        data-module="nhsuk-checkboxes"
+        data-nhsuk-checkboxes-init=""
+        id="example"
+      >
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-1"
+            id="example-1--label"
+          >
+            Email
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-2"
+            name="example"
+            type="checkbox"
+            value="phone"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-2"
+            id="example-2--label"
+          >
+            Phone
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-3"
+            name="example"
+            type="checkbox"
+            value="text"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-3"
+            id="example-3--label"
+          >
+            Text message
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`Checkboxes matches snapshot (via server): server 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <fieldset
+      aria-describedby="example--hint"
+      class="nhsuk-fieldset"
+    >
+      <legend
+        class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"
+      >
+        How do you want to be contacted about this?
+      </legend>
+      <div
+        class="nhsuk-hint"
+        id="example--hint"
+      >
+        Select all options that are relevant to you
+      </div>
+      <div
+        class="nhsuk-checkboxes"
+        data-module="nhsuk-checkboxes"
+        id="example"
+      >
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-1"
+            id="example-1--label"
+          >
+            Email
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-2"
+            name="example"
+            type="checkbox"
+            value="phone"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-2"
+            id="example-2--label"
+          >
+            Phone
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-3"
+            name="example"
+            type="checkbox"
+            value="text"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-3"
+            id="example-3--label"
+          >
+            Text message
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`Checkboxes matches snapshot 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <fieldset
+      aria-describedby="example--hint"
+      class="nhsuk-fieldset"
+    >
+      <legend
+        class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"
+      >
+        How do you want to be contacted about this?
+      </legend>
+      <div
+        class="nhsuk-hint"
+        id="example--hint"
+      >
+        Select all options that are relevant to you
+      </div>
+      <div
+        class="nhsuk-checkboxes"
+        data-module="nhsuk-checkboxes"
+        data-nhsuk-checkboxes-init=""
+        id="example"
+      >
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-1"
+            id="example-1--label"
+          >
+            Email
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-2"
+            name="example"
+            type="checkbox"
+            value="phone"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-2"
+            id="example-2--label"
+          >
+            Phone
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-3"
+            name="example"
+            type="checkbox"
+            value="text"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-3"
+            id="example-3--label"
+          >
+            Text message
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`Checkboxes matches snapshot with HTML in props 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group nhsuk-form-group--error"
+  >
+    <fieldset
+      aria-describedby="example--hint example--error-message"
+      class="nhsuk-fieldset"
+    >
+      <legend
+        class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"
+      >
+        <h1
+          class="nhsuk-fieldset__heading"
+        >
+          <span
+            class="nhsuk-caption-l"
+          >
+            Example
+          </span>
+           Legend text
+        </h1>
+      </legend>
+      <div
+        class="nhsuk-hint"
+        id="example--hint"
+      >
+        Hint text 
+        <em>
+          with HTML
+        </em>
+      </div>
+      <span
+        class="nhsuk-error-message"
+        id="example--error-message"
+      >
+        <span
+          class="nhsuk-u-visually-hidden"
+        >
+          Error: 
+        </span>
+        Error text 
+        <em>
+          with HTML
+        </em>
+      </span>
+      <div
+        class="nhsuk-checkboxes"
+        data-module="nhsuk-checkboxes"
+        data-nhsuk-checkboxes-init=""
+        id="example"
+      >
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            aria-describedby="example-1--hint"
+            class="nhsuk-checkboxes__input"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="animal"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-1"
+            id="example-1--label"
+          >
+            Waste from animal carcasses
+          </label>
+          <div
+            class="nhsuk-hint nhsuk-checkboxes__hint"
+            id="example-1--hint"
+          >
+            Item hint text 
+            <em>
+              with HTML
+            </em>
+          </div>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-2"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-2"
+            id="example-2--label"
+          >
+            Email
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-3"
+            name="example"
+            type="checkbox"
+            value="phone"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-3"
+            id="example-3--label"
+          >
+            Phone
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-4"
+            name="example"
+            type="checkbox"
+            value="text"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-4"
+            id="example-4--label"
+          >
+            Text message
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`Checkboxes matches snapshot with an exclusive checkbox 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <fieldset
+      aria-describedby="example--hint"
+      class="nhsuk-fieldset"
+    >
+      <legend
+        class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"
+      >
+        How do you want to be contacted about this?
+      </legend>
+      <div
+        class="nhsuk-hint"
+        id="example--hint"
+      >
+        Select all options that are relevant to you
+      </div>
+      <div
+        class="nhsuk-checkboxes"
+        data-module="nhsuk-checkboxes"
+        data-nhsuk-checkboxes-init=""
+        id="example"
+      >
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-1"
+            id="example-1--label"
+          >
+            Email
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-2"
+            name="example"
+            type="checkbox"
+            value="phone"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-2"
+            id="example-2--label"
+          >
+            Phone
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-3"
+            name="example"
+            type="checkbox"
+            value="text"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-3"
+            id="example-3--label"
+          >
+            Text message
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__divider"
+        >
+          or
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            data-checkbox-exclusive="true"
+            id="example-4"
+            name="example"
+            type="checkbox"
+            value="none"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-4"
+            id="example-4--label"
+          >
+            None
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`Checkboxes matches snapshot with an exclusive checkbox and named groups 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <fieldset
+      aria-describedby="example--hint"
+      class="nhsuk-fieldset"
+    >
+      <legend
+        class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"
+      >
+        How do you want to be contacted about this?
+      </legend>
+      <div
+        class="nhsuk-hint"
+        id="example--hint"
+      >
+        Select all options that are relevant to you
+      </div>
+      <div
+        class="nhsuk-checkboxes"
+        data-module="nhsuk-checkboxes"
+        data-nhsuk-checkboxes-init=""
+        id="example"
+      >
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            data-checkbox-exclusive-group="communication-preferences"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-1"
+            id="example-1--label"
+          >
+            Email
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            data-checkbox-exclusive-group="communication-preferences"
+            id="example-2"
+            name="example"
+            type="checkbox"
+            value="phone"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-2"
+            id="example-2--label"
+          >
+            Phone
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            data-checkbox-exclusive-group="communication-preferences"
+            id="example-3"
+            name="example"
+            type="checkbox"
+            value="text"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-3"
+            id="example-3--label"
+          >
+            Text message
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__divider"
+        >
+          or
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            data-checkbox-exclusive="true"
+            data-checkbox-exclusive-group="communication-preferences"
+            id="example-4"
+            name="example"
+            type="checkbox"
+            value="none"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-4"
+            id="example-4--label"
+          >
+            None of the above
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;
+
+exports[`Checkboxes matches snapshot with error message 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group nhsuk-form-group--error"
+  >
+    <fieldset
+      aria-describedby="example--hint example--error-message"
+      class="nhsuk-fieldset"
+    >
+      <legend
+        class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l"
+      >
+        How do you want to be contacted about this?
+      </legend>
+      <div
+        class="nhsuk-hint"
+        id="example--hint"
+      >
+        Select all options that are relevant to you
+      </div>
+      <span
+        class="nhsuk-error-message"
+        id="example--error-message"
+      >
+        <span
+          class="nhsuk-u-visually-hidden"
+        >
+          Error: 
+        </span>
+        Example error
+      </span>
+      <div
+        class="nhsuk-checkboxes"
+        data-module="nhsuk-checkboxes"
+        data-nhsuk-checkboxes-init=""
+        id="example"
+      >
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-1"
+            name="example"
+            type="checkbox"
+            value="email"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-1"
+            id="example-1--label"
+          >
+            Email
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-2"
+            name="example"
+            type="checkbox"
+            value="phone"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-2"
+            id="example-2--label"
+          >
+            Phone
+          </label>
+        </div>
+        <div
+          class="nhsuk-checkboxes__item"
+        >
+          <input
+            class="nhsuk-checkboxes__input"
+            id="example-3"
+            name="example"
+            type="checkbox"
+            value="text"
+          />
+          <label
+            class="nhsuk-label nhsuk-checkboxes__label"
+            for="example-3"
+            id="example-3--label"
+          >
+            Text message
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+</div>
+`;

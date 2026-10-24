@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ErrorSummary ErrorSummary.List matches snapshot: ErrorSummary.List 1`] = `
+<div>
+  <ul
+    class="nhsuk-list nhsuk-error-summary__list"
+  >
+    List
+  </ul>
+</div>
+`;
+
+exports[`ErrorSummary ErrorSummary.ListItem matches snapshot for items with links 1`] = `
+<div>
+  <li>
+    <a
+      href="#example-error-1"
+    >
+      List item with link
+    </a>
+  </li>
+</div>
+`;
+
+exports[`ErrorSummary ErrorSummary.ListItem matches snapshot for items without links 1`] = `
+<div>
+  <li>
+    List item without link
+  </li>
+</div>
+`;
+
+exports[`ErrorSummary ErrorSummary.Title matches snapshot: ErrorSummary.Title 1`] = `
+<div>
+  <h2
+    class="nhsuk-error-summary__title"
+  >
+    Title
+  </h2>
+</div>
+`;
+
+exports[`ErrorSummary matches snapshot (via server): client 1`] = `
+<div>
+  <div
+    class="nhsuk-error-summary"
+    data-module="nhsuk-error-summary"
+    data-nhsuk-error-summary-init=""
+    tabindex="-1"
+  >
+    <div
+      role="alert"
+    >
+      <div
+        class="nhsuk-error-summary__body"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ErrorSummary matches snapshot (via server): server 1`] = `
+<div>
+  <div
+    class="nhsuk-error-summary"
+    data-module="nhsuk-error-summary"
+  >
+    <div
+      role="alert"
+    >
+      <div
+        class="nhsuk-error-summary__body"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ErrorSummary matches snapshot 1`] = `
+<div>
+  <div
+    class="nhsuk-error-summary"
+    data-module="nhsuk-error-summary"
+    data-nhsuk-error-summary-init=""
+    tabindex="-1"
+  >
+    <div
+      role="alert"
+    >
+      <div
+        class="nhsuk-error-summary__body"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`WarningCallout matches snapshot 1`] = `
+<div>
+  <div
+    class="nhsuk-card nhsuk-card--warning"
+  >
+    <div
+      class="nhsuk-card__content"
+    >
+      <h3
+        class="nhsuk-card__heading"
+      >
+        <span
+          role="text"
+        >
+          <span
+            class="nhsuk-u-visually-hidden"
+          >
+            Important: 
+          </span>
+          School, nursery or work
+        </span>
+      </h3>
+      <p>
+        Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WarningCallout matches snapshot without hidden text 1`] = `
+<div>
+  <div
+    class="nhsuk-card nhsuk-card--warning"
+  >
+    <div
+      class="nhsuk-card__content"
+    >
+      <h3
+        class="nhsuk-card__heading"
+      >
+        Important
+      </h3>
+      <p>
+        For safety, tell your doctor or pharmacist if you're taking any other medicines, including herbal medicines, vitamins or supplements.
+      </p>
+    </div>
+  </div>
+</div>
+`;

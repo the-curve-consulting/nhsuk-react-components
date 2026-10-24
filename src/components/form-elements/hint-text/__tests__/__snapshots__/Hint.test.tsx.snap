@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Hint matches snapshot: Hint 1`] = `
+<div>
+  <div
+    class="nhsuk-hint"
+  >
+    Text
+  </div>
+</div>
+`;

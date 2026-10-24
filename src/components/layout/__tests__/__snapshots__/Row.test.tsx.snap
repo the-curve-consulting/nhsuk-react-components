@@ -1,7 +1,9 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Row matches snapshot: Row 1`] = `
-<div
-  className="nhsuk-grid-row"
-/>
+<div>
+  <div
+    class="nhsuk-grid-row"
+  />
+</div>
 `;

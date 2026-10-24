@@ -1,0 +1,114 @@
+# NHS.UK React components
+
+## 6.0.1 - 18 May 2026
+
+This is a bug fix release.
+
+Note: Form components with missing `id` (or `idPrefix`) now fall back to the `name` prop before generating IDs. This helps prevent [hydration mismatch](https://react.dev/link/hydration-mismatch) errors with server-side rendered (SSR) HTML.
+
+### :wrench: **Fixes**
+
+- [#377: Fix radios component with `defaultChecked` inputs and conditional content](https://github.com/NHSDigital/nhsuk-react-components/pull/377)
+
+## 6.0.0 - 10 March 2026
+
+This version provides support for NHS.UK frontend v10.3.0
+
+You can follow the [upgrade to 6.0 migration guide](https://github.com/NHSDigital/nhsuk-react-components/blob/main/docs/upgrade-to-6.0.md) to see what's changed and what you need to update.
+
+- React v19 with strict mode support
+- React server-side rendering (SSR) support
+- React server components (RSC) support
+- Forwarded refs from all form inputs
+
+Features from NHS.UK frontend v10.3.0 include:
+
+- [File upload component](https://service-manual.nhs.uk/design-system/components/file-upload)
+- [Interruption panel variant](https://service-manual.nhs.uk/design-system/components/panel#interruption-panel)
+- [Summary cards](https://service-manual.nhs.uk/design-system/components/summary-list#summary-cards)
+
+Features from NHS.UK frontend v10.2.0 include:
+
+- [Password input component](https://service-manual.nhs.uk/design-system/components/password-input)
+- [Smaller and inline buttons](https://service-manual.nhs.uk/design-system/components/buttons#smaller-buttons)
+- [Text input styles for codes and sequences](https://service-manual.nhs.uk/design-system/components/text-input#codes-and-sequences)
+- [Select](https://service-manual.nhs.uk/design-system/components/select) dividers using `<Select.Divider />`
+
+Features from NHS.UK frontend v10.1.0 include:
+
+- [Smaller radios](https://service-manual.nhs.uk/design-system/components/radios#smaller-radios) and [smaller checkboxes](https://service-manual.nhs.uk/design-system/components/checkboxes#smaller-checkboxes)
+- [Numbered pagination](https://service-manual.nhs.uk/design-system/components/pagination#for-navigating-between-pages-of-items)
+
+Features from NHS.UK frontend v10.0.0 include:
+
+- [Header component with account section](https://service-manual.nhs.uk/design-system/components/header)
+- [Notification banner component](https://service-manual.nhs.uk/design-system/components/notification-banners)
+- [Panel component](https://service-manual.nhs.uk/design-system/components/panel)
+- [Full width buttons on mobile](https://service-manual.nhs.uk/design-system/components/buttons)
+
+For a full list of changes in this release please refer to the [upgrade to 6.0 migration guide](https://github.com/NHSDigital/nhsuk-react-components/blob/main/docs/upgrade-to-6.0.md).
+
+## 5.0.0 - 4 November 2024
+
+This version provides support for NHS.UK frontend v9.x.
+
+For a full list of changes in this release please refer to the [migration doc](https://github.com/NHSDigital/nhsuk-react-components/blob/main/docs/upgrade-to-5.0.md).
+
+## 4.1.3 - 23 September 2024
+
+:wrench: **Fixes**
+
+- Remove the unnecessary aria-labelledby tags from radio items. PR [#253](https://github.com/NHSDigital/nhsuk-react-components/pull/253)
+
+## 4.1.2 - 3 September 2024
+
+:wrench: **Fixes**
+
+- Fix issues with SkipLink (always set the href) and bring into line with NHSUK frontend. PR [#248](https://github.com/NHSDigital/nhsuk-react-components/pull/248)
+
+## 4.1.1 - 9 August 2024
+
+:wrench: **Fixes**
+
+- Remove the unnecessary aria-labelledby tags from DateInput fields. PR [#246](https://github.com/NHSDigital/nhsuk-react-components/pull/246)
+
+## 4.1.0 - 11 June 2024
+
+:wrench: **Fixes**
+
+- Add js shims for buttons. PR [#231](https://github.com/NHSDigital/nhsuk-react-components/pull/231), Fixes [#218](https://github.com/NHSDigital/nhsuk-react-components/issues/218)
+- Fix errors not being linked to inputs. PR [#230](https://github.com/NHSDigital/nhsuk-react-components/pull/230), Fixes [#227](https://github.com/NHSDigital/nhsuk-react-components/issues/227)
+- Fix inputs incorrectly using `aria-labelledby`. PR [#230](https://github.com/NHSDigital/nhsuk-react-components/pull/230), Fixes [#212](https://github.com/NHSDigital/nhsuk-react-components/issues/212)
+- Update Storybook docs for several components.
+
+:new: **New features**
+
+- Added a CHANGELOG to keep track of changes between releases. [Keep a changelog](https://keepachangelog.com)
+- Added support for `preventDoubleClick` debouncing on buttons. PR [#231](https://github.com/NHSDigital/nhsuk-react-components/pull/231)
+- Error summaries now automatically set role, tabindex, and aria-labelledby. PR [#229](https://github.com/NHSDigital/nhsuk-react-components/pull/237), Fixes [#228](https://github.com/NHSDigital/nhsuk-react-components/issues/229)
+- Storybook link in readme now points to latest version. PR [#226](https://github.com/NHSDigital/nhsuk-react-components/pull/226)
+
+## 4.0.2 - 21 May 2024
+
+:wrench: **Fixes**
+
+- Fix error message role by @edwardhorsford in [#219](https://github.com/NHSDigital/nhsuk-react-components/pull/219)
+
+## 4.0.1 - 20 May 2024
+
+:wrench: **Fixes**
+
+- Fix issue with the footer copyright not being rendered in the correct location if there are multiple link columns by @jakeb-nhs in [#223](https://github.com/NHSDigital/nhsuk-react-components/pull/223)
+
+## 4.0.0 - 15 May 2024
+
+This version updates nhsuk-frontend to version 8.
+
+For a full list of changes in this release please refer to the [migration doc](https://github.com/NHSDigital/nhsuk-react-components/blob/main/docs/upgrade-to-4.0.md).
+
+- Migrate enzyme to react-testing-library by @JoshuaBates-NHS in [#198](https://github.com/NHSDigital/nhsuk-react-components/pull/198)
+- Allow support for module directives in build process by @JoshuaBates-NHS in [#199](https://github.com/NHSDigital/nhsuk-react-components/pull/199)
+- Update modified components since NHS UK frontend v5 by @jakeb-nhs in [#197](https://github.com/NHSDigital/nhsuk-react-components/pull/197)
+- Add new components since NHS UK frontend v5 by @jakeb-nhs in [#202](https://github.com/NHSDigital/nhsuk-react-components/pull/202)
+- Migrate some patterns to components, rework removed components from frontend v8 by @jakeb-nhs in [#203](https://github.com/NHSDigital/nhsuk-react-components/pull/203)
+- Improve unit test coverage by @jakeb-nhs in [#204](https://github.com/NHSDigital/nhsuk-react-components/pull/204)

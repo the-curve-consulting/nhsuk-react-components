@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`DoAndDontList DoDontList.Item matches snapshot: DoDontList.Item 1`] = `
+<div>
+  <li>
+    <svg
+      aria-hidden="true"
+      class="nhsuk-icon nhsuk-icon--tick"
+      focusable="false"
+      height="16"
+      viewBox="0 0 24 24"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.4 18.8a2 2 0 0 1-2.7.1h-.1L4 14.1a1.5 1.5 0 0 1 2.1-2L10 16l8.1-8.1a1.5 1.5 0 1 1 2.2 2l-8.9 9Z"
+      />
+    </svg>
+    Text
+  </li>
+</div>
+`;
+
+exports[`DoAndDontList list type "do" matches snapshot (via server): client 1`] = `
+<div>
+  <div
+    class="nhsuk-do-dont-list"
+  >
+    <h3
+      class="nhsuk-do-dont-list__label"
+    >
+      Do
+    </h3>
+    <ul
+      class="nhsuk-list nhsuk-list--tick"
+      role="list"
+    />
+  </div>
+</div>
+`;
+
+exports[`DoAndDontList list type "do" matches snapshot (via server): server 1`] = `
+<div>
+  <div
+    class="nhsuk-do-dont-list"
+  >
+    <h3
+      class="nhsuk-do-dont-list__label"
+    >
+      Do
+    </h3>
+    <ul
+      class="nhsuk-list nhsuk-list--tick"
+      role="list"
+    />
+  </div>
+</div>
+`;
+
+exports[`DoAndDontList list type "do" matches snapshot: DoDontList-Do 1`] = `
+<div>
+  <div
+    class="nhsuk-do-dont-list"
+  >
+    <h3
+      class="nhsuk-do-dont-list__label"
+    >
+      Do
+    </h3>
+    <ul
+      class="nhsuk-list nhsuk-list--tick"
+      role="list"
+    />
+  </div>
+</div>
+`;
+
+exports[`DoAndDontList list type "dont" matches snapshot (via server): client 1`] = `
+<div>
+  <div
+    class="nhsuk-do-dont-list"
+  >
+    <h3
+      class="nhsuk-do-dont-list__label"
+    >
+      Don't
+    </h3>
+    <ul
+      class="nhsuk-list nhsuk-list--cross"
+      role="list"
+    />
+  </div>
+</div>
+`;
+
+exports[`DoAndDontList list type "dont" matches snapshot (via server): server 1`] = `
+<div>
+  <div
+    class="nhsuk-do-dont-list"
+  >
+    <h3
+      class="nhsuk-do-dont-list__label"
+    >
+      Don't
+    </h3>
+    <ul
+      class="nhsuk-list nhsuk-list--cross"
+      role="list"
+    />
+  </div>
+</div>
+`;
+
+exports[`DoAndDontList list type "dont" matches snapshot: DoDontList-Dont 1`] = `
+<div>
+  <div
+    class="nhsuk-do-dont-list"
+  >
+    <h3
+      class="nhsuk-do-dont-list__label"
+    >
+      Don't
+    </h3>
+    <ul
+      class="nhsuk-list nhsuk-list--cross"
+      role="list"
+    />
+  </div>
+</div>
+`;

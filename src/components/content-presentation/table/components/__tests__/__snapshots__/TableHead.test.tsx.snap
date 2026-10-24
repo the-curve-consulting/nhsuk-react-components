@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Table.Head matches snapshot 1`] = `
+<div>
+  <table
+    class="nhsuk-table"
+  >
+    <thead
+      class="nhsuk-table__head"
+    />
+  </table>
+</div>
+`;

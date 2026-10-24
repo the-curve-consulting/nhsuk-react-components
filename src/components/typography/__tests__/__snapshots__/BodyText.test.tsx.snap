@@ -1,9 +1,11 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`BodyText matches snapshot 1`] = `
-<p
-  className="nhsuk-body"
->
-  Text
-</p>
+<div>
+  <p
+    class="nhsuk-body"
+  >
+    Text
+  </p>
+</div>
 `;

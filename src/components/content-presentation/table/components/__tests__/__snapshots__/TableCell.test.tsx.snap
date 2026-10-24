@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Table.Cell matches snapshot 1`] = `
+<div>
+  <table
+    class="nhsuk-table"
+  >
+    <tbody
+      class="nhsuk-table__body"
+    >
+      <tr
+        class="nhsuk-table__row"
+      >
+        <td
+          class="nhsuk-table__cell"
+        >
+          Cell
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

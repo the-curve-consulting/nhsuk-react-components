@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`BackLink matches snapshot: BackLink 1`] = `
+<div>
+  <a
+    class="nhsuk-back-link"
+    href="/back"
+  >
+    Back
+  </a>
+</div>
+`;

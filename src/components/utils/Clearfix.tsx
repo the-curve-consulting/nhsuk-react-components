@@ -1,7 +1,5 @@
-import React, { HTMLProps } from 'react';
+import { type ComponentPropsWithoutRef, type FC } from 'react';
 
-const Clearfix: React.FC<HTMLProps<HTMLDivElement>> = (props) => (
+export const Clearfix: FC<ComponentPropsWithoutRef<'div'>> = (props) => (
   <div className="nhsuk-u-clear" {...props} />
 );
-
-export default Clearfix;

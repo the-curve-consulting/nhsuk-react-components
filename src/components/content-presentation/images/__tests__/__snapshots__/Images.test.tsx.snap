@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Images matches snapshot: Images 1`] = `
+<div>
+  <figure
+    class="nhsuk-image"
+  >
+    <img
+      alt=""
+      class="nhsuk-image__img"
+    />
+  </figure>
+</div>
+`;

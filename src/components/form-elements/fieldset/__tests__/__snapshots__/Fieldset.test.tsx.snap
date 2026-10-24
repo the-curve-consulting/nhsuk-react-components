@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Fieldset matches snapshot: Fieldset 1`] = `
+<div>
+  <fieldset
+    class="nhsuk-fieldset"
+  >
+    <div
+      class="nhsuk-form-group"
+    >
+      <input
+        class="nhsuk-input"
+        id="test-input"
+        name="test-input"
+        type="text"
+      />
+    </div>
+  </fieldset>
+</div>
+`;

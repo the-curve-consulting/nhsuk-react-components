@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`FormGroup matches snapshot (via server): client 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <input
+      id="testId"
+      name="testId"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormGroup matches snapshot (via server): server 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <input
+      id="testId"
+      name="testId"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormGroup matches snapshot 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <input
+      id="testId"
+      name="testId"
+    />
+  </div>
+</div>
+`;
+
+exports[`FormGroup matches snapshot with multiple children (via server): client 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <div
+      class="nhsuk-input-wrapper"
+    >
+      <input
+        id="testId"
+        name="testId"
+      />
+      <button
+        aria-controls="testId"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FormGroup matches snapshot with multiple children (via server): server 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <div
+      class="nhsuk-input-wrapper"
+    >
+      <input
+        id="testId"
+        name="testId"
+      />
+      <button
+        aria-controls="testId"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FormGroup matches snapshot with multiple children 1`] = `
+<div>
+  <div
+    class="nhsuk-form-group"
+  >
+    <div
+      class="nhsuk-input-wrapper"
+    >
+      <input
+        id="testId"
+        name="testId"
+      />
+      <button
+        aria-controls="testId"
+      />
+    </div>
+  </div>
+</div>
+`;

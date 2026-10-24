@@ -1,0 +1,274 @@
+import { render } from '@testing-library/react';
+
+import { type HeadingProps } from '#components/typography/Heading.js';
+import { renderClient, renderServer } from '#util/components';
+import { type CareCardType } from '#util/types';
+
+import { Card, type CardProps } from '..';
+
+describe('Card', () => {
+  it('matches snapshot with single action', async () => {
+    const { container } = await renderClient(
+      <Card>
+        <Card.Heading>Regional Manager</Card.Heading>
+        <Card.Action href="#/delete">Delete</Card.Action>
+        <Card.Description>Karen Francis</Card.Description>
+      </Card>,
+      { className: 'nhsuk-card' },
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('matches snapshot with multiple actions', async () => {
+    const { container } = await renderClient(
+      <Card>
+        <Card.Heading>Regional Manager</Card.Heading>
+        <Card.Action href="#/delete">Delete</Card.Action>
+        <Card.Action href="#/withdraw">Withdraw</Card.Action>
+        <Card.Description>Karen Francis</Card.Description>
+      </Card>,
+      { className: 'nhsuk-card' },
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('matches snapshot with multiple actions (via server)', async () => {
+    const { container, element } = await renderServer(
+      <Card>
+        <Card.Heading>Regional Manager</Card.Heading>
+        <Card.Action href="#/delete">Delete</Card.Action>
+        <Card.Action href="#/withdraw">Withdraw</Card.Action>
+        <Card.Description>Karen Francis</Card.Description>
+      </Card>,
+      { className: 'nhsuk-card' },
+    );
+
+    expect(container).toMatchSnapshot('server');
+
+    await renderClient(element, {
+      className: 'nhsuk-card',
+      hydrate: true,
+      container,
+    });
+
+    expect(container).toMatchSnapshot('client');
+  });
+
+  it('can render Card.Link as different elements', () => {
+    const { container } = render(
+      <Card clickable>
+        <Card.Heading>
+          <Card.Link asElement="button" type="button">
+            Click me!
+          </Card.Link>
+        </Card.Heading>
+      </Card>,
+    );
+
+    expect(container.querySelector('button.nhsuk-card__link')?.textContent).toBe('Click me!');
+  });
+
+  it('adds clickable modifier', () => {
+    const { container } = render(
+      <Card clickable>
+        <Card.Heading size="m">
+          <Card.Link href="#">Introduction to care and support</Card.Link>
+        </Card.Heading>
+        <Card.Description>
+          A quick guide for people who have care and support needs and their carers
+        </Card.Description>
+      </Card>,
+    );
+
+    const cardEl = container.querySelector('.nhsuk-card');
+
+    expect(cardEl).toHaveClass('nhsuk-card--clickable');
+  });
+
+  it.each<{ modifier: keyof CardProps }>([
+    { modifier: 'clickable' },
+    { modifier: 'feature' },
+    { modifier: 'primary' },
+    { modifier: 'secondary' },
+    { modifier: 'warning' },
+  ])('adds $modifier card type modifier', ({ modifier }) => {
+    const { container } = render(
+      <Card {...{ [modifier]: true }}>
+        <Card.Heading>Example card heading</Card.Heading>
+        <Card.Description>Example card description</Card.Description>
+      </Card>,
+    );
+
+    const cardEl = container.querySelector('.nhsuk-card');
+    const cardHeadingEl = cardEl?.querySelector('.nhsuk-card__heading');
+
+    expect(cardEl).toHaveClass(`nhsuk-card--${modifier}`);
+    expect(cardHeadingEl).toHaveClass('nhsuk-card__heading');
+    expect(cardHeadingEl).toHaveProperty('tagName', 'H2');
+  });
+
+  it.each<Required<Pick<HeadingProps, 'size'>>>([
+    { size: 's' },
+    { size: 'm' },
+    { size: 'l' },
+    { size: 'xl' },
+  ])('renders the heading with custom size $size', (props) => {
+    const { container } = render(
+      <Card>
+        <Card.Heading {...props}>Example card heading</Card.Heading>
+      </Card>,
+    );
+
+    const cardEl = container.querySelector('.nhsuk-card');
+    const cardHeadingEl = cardEl?.querySelector('.nhsuk-card__heading');
+
+    expect(cardHeadingEl).toHaveClass(`nhsuk-heading-${props.size}`);
+  });
+
+  describe('Care card variant', () => {
+    describe.each<{
+      heading: string;
+      cardType: CareCardType;
+      visuallyHidden: string;
+    }>([
+      {
+        heading: 'Non urgent heading (blue)',
+        cardType: 'non-urgent',
+        visuallyHidden: 'Non-urgent advice',
+      },
+      {
+        heading: 'Urgent heading (red)',
+        cardType: 'urgent',
+        visuallyHidden: 'Urgent advice',
+      },
+      {
+        heading: 'Emergency heading (red and black)',
+        cardType: 'emergency',
+        visuallyHidden: 'Immediate action required',
+      },
+    ])('$cardType', ({ heading, cardType, visuallyHidden }) => {
+      it('matches the snapshot', () => {
+        const { container } = render(
+          <Card cardType={cardType}>
+            <Card.Heading>{heading}</Card.Heading>
+          </Card>,
+        );
+
+        expect(container).toMatchSnapshot();
+      });
+
+      it('adds classes to card', () => {
+        const { container } = render(
+          <Card cardType={cardType}>
+            <Card.Heading>{heading}</Card.Heading>
+          </Card>,
+        );
+
+        const cardEl = container.querySelector('.nhsuk-card');
+
+        expect(cardEl).toHaveClass('nhsuk-card--care');
+        expect(cardEl).toHaveClass(`nhsuk-card--care--${cardType}`);
+      });
+
+      it('renders the heading with the expected hidden text', () => {
+        const { container } = render(
+          <Card cardType={cardType}>
+            <Card.Heading>{heading}</Card.Heading>
+          </Card>,
+        );
+
+        const headingEl = container.querySelector('h2');
+
+        expect(headingEl).toHaveTextContent(`${visuallyHidden}: ${heading}`);
+      });
+
+      it('renders the heading with custom visually hidden text', () => {
+        const { container } = render(
+          <Card cardType={cardType}>
+            <Card.Heading visuallyHiddenText="Custom">{heading}</Card.Heading>
+          </Card>,
+        );
+
+        const headingEl = container.querySelector('h2');
+
+        expect(headingEl).toHaveTextContent(`Custom: ${heading}`);
+      });
+
+      it('renders the heading with custom visually hidden HTML', () => {
+        const { container } = render(
+          <Card cardType={cardType}>
+            <Card.Heading
+              visuallyHiddenText={
+                <>
+                  Custom <em>with HTML</em>
+                </>
+              }
+            >
+              {heading}
+            </Card.Heading>
+          </Card>,
+        );
+
+        const headingEl = container.querySelector('h2');
+
+        expect(headingEl).toHaveTextContent(`Custom with HTML: ${heading}`);
+        expect(headingEl).toContainHTML('Custom <em>with HTML</em>');
+      });
+
+      it('renders the heading with custom heading level', () => {
+        const { container } = render(
+          <Card cardType={cardType}>
+            <Card.Heading headingLevel="h3">{heading}</Card.Heading>
+          </Card>,
+        );
+
+        const headingEl = container.querySelector('h3');
+
+        expect(headingEl).toHaveTextContent(`${visuallyHidden}: ${heading}`);
+      });
+
+      it.each<Required<Pick<HeadingProps, 'size'>>>([
+        { size: 's' },
+        { size: 'm' },
+        { size: 'l' },
+        { size: 'xl' },
+      ])('renders the heading with custom size $size', (props) => {
+        const { container } = render(
+          <Card cardType={cardType}>
+            <Card.Heading {...props}>Example card heading</Card.Heading>
+          </Card>,
+        );
+
+        const cardEl = container.querySelector('.nhsuk-card');
+        const cardHeadingEl = cardEl?.querySelector('.nhsuk-card__heading');
+
+        expect(cardHeadingEl).toHaveClass(`nhsuk-heading-${props.size}`);
+      });
+    });
+  });
+
+  describe('Card.Group', () => {
+    it('matches snapshot', () => {
+      const { container } = render(
+        <Card.Group>
+          <Card.GroupItem width="one-half">
+            <Card>
+              <Card.Heading>Test Card 1</Card.Heading>
+              <Card.Description>Test Card 1 Description</Card.Description>
+            </Card>
+          </Card.GroupItem>
+          <Card.GroupItem width="one-half">
+            <Card>
+              <Card.Heading>Test Card 2</Card.Heading>
+              <Card.Description>Test Card 2 Description</Card.Description>
+            </Card>
+          </Card.GroupItem>
+        </Card.Group>,
+      );
+
+      expect(container).toMatchSnapshot();
+    });
+  });
+});

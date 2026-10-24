@@ -1,0 +1,387 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Card Card.Group matches snapshot 1`] = `
+<div>
+  <div
+    class="nhsuk-grid-row nhsuk-card-group"
+  >
+    <div
+      class="nhsuk-grid-column-one-half nhsuk-card-group__item"
+    >
+      <div
+        class="nhsuk-card"
+      >
+        <div
+          class="nhsuk-card__content"
+        >
+          <h2
+            class="nhsuk-card__heading"
+          >
+            Test Card 1
+          </h2>
+          <p
+            class="nhsuk-card__description"
+          >
+            Test Card 1 Description
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="nhsuk-grid-column-one-half nhsuk-card-group__item"
+    >
+      <div
+        class="nhsuk-card"
+      >
+        <div
+          class="nhsuk-card__content"
+        >
+          <h2
+            class="nhsuk-card__heading"
+          >
+            Test Card 2
+          </h2>
+          <p
+            class="nhsuk-card__description"
+          >
+            Test Card 2 Description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card Care card variant emergency matches the snapshot 1`] = `
+<div>
+  <div
+    class="nhsuk-card nhsuk-card--care nhsuk-card--care--emergency"
+  >
+    <div
+      class="nhsuk-card__heading-container"
+    >
+      <h2
+        class="nhsuk-card__heading"
+      >
+        <span
+          role="text"
+        >
+          <span
+            class="nhsuk-u-visually-hidden"
+          >
+            Immediate action required: 
+          </span>
+          Emergency heading (red and black)
+        </span>
+      </h2>
+      <span
+        aria-hidden="true"
+        class="nhsuk-card--care__arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card Care card variant non-urgent matches the snapshot 1`] = `
+<div>
+  <div
+    class="nhsuk-card nhsuk-card--care nhsuk-card--care--non-urgent"
+  >
+    <div
+      class="nhsuk-card__heading-container"
+    >
+      <h2
+        class="nhsuk-card__heading"
+      >
+        <span
+          role="text"
+        >
+          <span
+            class="nhsuk-u-visually-hidden"
+          >
+            Non-urgent advice: 
+          </span>
+          Non urgent heading (blue)
+        </span>
+      </h2>
+      <span
+        aria-hidden="true"
+        class="nhsuk-card--care__arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card Care card variant urgent matches the snapshot 1`] = `
+<div>
+  <div
+    class="nhsuk-card nhsuk-card--care nhsuk-card--care--urgent"
+  >
+    <div
+      class="nhsuk-card__heading-container"
+    >
+      <h2
+        class="nhsuk-card__heading"
+      >
+        <span
+          role="text"
+        >
+          <span
+            class="nhsuk-u-visually-hidden"
+          >
+            Urgent advice: 
+          </span>
+          Urgent heading (red)
+        </span>
+      </h2>
+      <span
+        aria-hidden="true"
+        class="nhsuk-card--care__arrow"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card matches snapshot with multiple actions (via server): client 1`] = `
+<div>
+  <div
+    class="nhsuk-card"
+  >
+    <div
+      class="nhsuk-card__heading-container"
+    >
+      <h2
+        class="nhsuk-card__heading"
+      >
+        Regional Manager
+      </h2>
+      <ul
+        class="nhsuk-card__actions"
+      >
+        <li
+          class="nhsuk-card__action"
+        >
+          <a
+            href="#/delete"
+          >
+            Delete
+            <span
+              class="nhsuk-u-visually-hidden"
+            >
+               (
+              <!-- -->
+              Regional Manager
+              <!-- -->
+              )
+            </span>
+          </a>
+        </li>
+        <li
+          class="nhsuk-card__action"
+        >
+          <a
+            href="#/withdraw"
+          >
+            Withdraw
+            <span
+              class="nhsuk-u-visually-hidden"
+            >
+               (
+              <!-- -->
+              Regional Manager
+              <!-- -->
+              )
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="nhsuk-card__content"
+    >
+      <p
+        class="nhsuk-card__description"
+      >
+        Karen Francis
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card matches snapshot with multiple actions (via server): server 1`] = `
+<div>
+  <div
+    class="nhsuk-card"
+  >
+    <div
+      class="nhsuk-card__heading-container"
+    >
+      <h2
+        class="nhsuk-card__heading"
+      >
+        Regional Manager
+      </h2>
+      <ul
+        class="nhsuk-card__actions"
+      >
+        <li
+          class="nhsuk-card__action"
+        >
+          <a
+            href="#/delete"
+          >
+            Delete
+            <span
+              class="nhsuk-u-visually-hidden"
+            >
+               (
+              <!-- -->
+              Regional Manager
+              <!-- -->
+              )
+            </span>
+          </a>
+        </li>
+        <li
+          class="nhsuk-card__action"
+        >
+          <a
+            href="#/withdraw"
+          >
+            Withdraw
+            <span
+              class="nhsuk-u-visually-hidden"
+            >
+               (
+              <!-- -->
+              Regional Manager
+              <!-- -->
+              )
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="nhsuk-card__content"
+    >
+      <p
+        class="nhsuk-card__description"
+      >
+        Karen Francis
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card matches snapshot with multiple actions 1`] = `
+<div>
+  <div
+    class="nhsuk-card"
+  >
+    <div
+      class="nhsuk-card__heading-container"
+    >
+      <h2
+        class="nhsuk-card__heading"
+      >
+        Regional Manager
+      </h2>
+      <ul
+        class="nhsuk-card__actions"
+      >
+        <li
+          class="nhsuk-card__action"
+        >
+          <a
+            href="#/delete"
+          >
+            Delete
+            <span
+              class="nhsuk-u-visually-hidden"
+            >
+               (
+              Regional Manager
+              )
+            </span>
+          </a>
+        </li>
+        <li
+          class="nhsuk-card__action"
+        >
+          <a
+            href="#/withdraw"
+          >
+            Withdraw
+            <span
+              class="nhsuk-u-visually-hidden"
+            >
+               (
+              Regional Manager
+              )
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="nhsuk-card__content"
+    >
+      <p
+        class="nhsuk-card__description"
+      >
+        Karen Francis
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Card matches snapshot with single action 1`] = `
+<div>
+  <div
+    class="nhsuk-card"
+  >
+    <div
+      class="nhsuk-card__heading-container"
+    >
+      <h2
+        class="nhsuk-card__heading"
+      >
+        Regional Manager
+      </h2>
+      <div
+        class="nhsuk-card__actions"
+      >
+        <a
+          href="#/delete"
+        >
+          Delete
+          <span
+            class="nhsuk-u-visually-hidden"
+          >
+             (
+            Regional Manager
+            )
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      class="nhsuk-card__content"
+    >
+      <p
+        class="nhsuk-card__description"
+      >
+        Karen Francis
+      </p>
+    </div>
+  </div>
+</div>
+`;

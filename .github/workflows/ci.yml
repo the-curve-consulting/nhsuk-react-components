@@ -1,20 +1,77 @@
 name: CI Build
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [main]
+
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      CHROMATIC_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+      CHROMATIC_SHA: ${{ github.event.pull_request.head.sha || github.ref }}
+      CHROMATIC_SLUG: ${{ github.repository }}
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          cache: yarn
+          node-version-file: .nvmrc
+
       - name: Yarn Install
         run: yarn
+
       - name: Lint
-        run: yarn lint:ci
+        run: yarn lint
+
       - name: Jest Tests
-        run: yarn test:ci
-      - name: Typescript build
+        run: yarn test --coverage
+
+      - name: Sonar analysis
+        if: ${{ env.SONAR_TOKEN }}
+        uses: SonarSource/sonarqube-scan-action@d209202bc7d53ff1cc128f7f907dac145c9d6ae9
+
+      - name: Package build
         run: yarn build
+        env:
+          NODE_ENV: production
+
       - name: Storybook build
-        run: yarn storybook-to-ghpages --dry-run --ci
+        run: yarn build-storybook
+        env:
+          NODE_ENV: production
+
+      - name: Switch to PR branch
+        if: ${{ github.event_name == 'pull_request' && env.CHROMATIC_PROJECT_TOKEN }}
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          clean: false
+          fetch-depth: 0
+          ref: ${{ env.CHROMATIC_BRANCH }}
+
+      - name: Storybook deploy
+        if: ${{ env.CHROMATIC_PROJECT_TOKEN }}
+        uses: chromaui/action@38afd264ef2241136f12d039093c2724748bec08
+        with:
+          autoAcceptChanges: main
+          branchName: ${{ env.CHROMATIC_BRANCH}}
+          exitZeroOnChanges: false
+          onlyChanged: ${{ github.event_name == 'pull_request' }}
+          projectToken: ${{ env.CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ env.GITHUB_TOKEN }}

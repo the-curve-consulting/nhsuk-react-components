@@ -1,13 +1,12 @@
-import React, { HTMLProps } from 'react';
 import classNames from 'classnames';
-import { ColWidth } from '../../util/types/NHSUKTypes';
+import { type ComponentPropsWithoutRef, type FC } from 'react';
 
-interface ColProps extends HTMLProps<HTMLDivElement> {
+import { type ColWidth } from '#util/types/index.js';
+
+export interface ColProps extends ComponentPropsWithoutRef<'div'> {
   width: ColWidth;
 }
 
-const Col: React.FC<ColProps> = ({ className, width, ...rest }) => (
+export const Col: FC<ColProps> = ({ className, width, ...rest }) => (
   <div className={classNames(`nhsuk-grid-column-${width}`, className)} {...rest} />
 );
-
-export default Col;
